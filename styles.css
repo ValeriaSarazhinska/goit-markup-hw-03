@@ -10,6 +10,22 @@
     --gray-background: #2F303A;
     --light-gray-background: #F5F4FA;
     --light-gray-border: #EEEEEE;
+    --header-gray-border: #ECECEC;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 body {
@@ -18,33 +34,39 @@ body {
     letter-spacing: 0.03em;
     color: var(--black-title);
     background-color: var(--white-main);
-    width: 1600px;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .header {
-    height: 80px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 215px;
+    border-bottom: 1px solid var(--header-gray-border);
 }
 
-.nav-container {
+.section {
+    padding: 94px 0;
+}
+
+.about-section {
+    padding-top: 0;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.nav-menu {
     display: flex;
+    padding: 24px 0;
+}
+
+.nav {
+    display: inline-flex;
     align-items: center;
+    margin-right: 344px;
 }
 
 .nav-list {
     display: flex;
-}
-
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .link {
@@ -78,11 +100,12 @@ body {
     color: var(--blue-main);
 }
 
-.contacts-container {
-    display: flex;
+.contacts {
+    display: inline-flex;
+    align-items: center;
 }
 
-.contacts {
+.contacts-link {
     font-weight: 500;
     color: var(--gray-substring);
 }
@@ -91,7 +114,7 @@ body {
     margin-right: 40px;
 }
 
-.contacts:hover, .contacts:focus {
+.contacts-link:hover, .contacts-link:focus {
     color: var(--blue-main);
 }
 
@@ -100,9 +123,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
     background-color: var(--gray-background);
-    margin-bottom: 94px;
+    padding: 200px 0;
 }
 
 .service-title {
@@ -113,7 +135,6 @@ body {
     color: var(--white-main);
     text-align: center;
     width: 696px;
-    margin: 0;
 }
 
 .service-button {
@@ -137,21 +158,16 @@ body {
     background-color: var(--blue-active);
 }
 
-.about-container {
-    padding: 0 215px;
-    margin-bottom: 94px;
-}
-
-.about-list {
+.section-list {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
+    gap: 30px;
 }
 
 .about-subtitle {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .about-info {
@@ -159,7 +175,7 @@ body {
     line-height: 1.71
 }
 
-.about-title {
+.section-title {
     font-size: 36px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -168,37 +184,25 @@ body {
 }
 
 .team-container {
-    padding: 94px 215px;
     background-color: var(--light-gray-background);
 }
 
-.team-title {
-    font-size: 36px;
-    letter-spacing: 0.03em;
-    line-height: 1.71;
-    text-align: center;
-}
-
-.team-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.team-card {
-    width: 270px;
-    height: 368px;
+.card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
     background-color: var(--white-main);
     text-align: center;
 }
 
+.card-info {
+    margin: 30px 0;
+}
+
 .team-member {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.17;
-    margin: 30px 0 10px;
+    margin-bottom: 10px;
 }
 
 .team-position {
@@ -207,9 +211,9 @@ body {
     margin: 0;
 }
 
-.footer-container {
+.footer {
     background-color: var(--gray-background);
-    padding: 60px 0 60px 215px;
+    padding: 60px 0;
 }
 
 .logo-light {
@@ -254,51 +258,34 @@ body {
     background-color: var(--blue-main);
 }
 
+.project-info {
+    padding: 20px 24px;
+    border: 1px solid var(--light-gray-border);
+    border-top: none;
+}
+
 .project-title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    margin: 20px 24px 4px;
+    margin-bottom: 4px;
 }
 
 .project-subtitle {
     font-size: 16px;
     line-height: 1.87;
     color: var(--gray-substring);
-    margin: 0 24px;
-}
-
-.portfolio-container {
-    padding: 94px 215px;
-}
-
-.portfolio-title {
-    font-size: 36px;
-    letter-spacing: 0.03em;
-    line-height: 1.71;
-    text-align: center;
-    margin: 0;
 }
 
 .portfolio-list {
     display: flex;
     justify-content: center;
+    gap: 9px;
     margin-bottom: 50px;
-}
-
-.portfolio-link {
-    margin-right: 9px;
 }
 
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project-card {
-    width: 370px;
-    height: 404px;
-    border: 1px solid var(--light-gray-border);
-    margin-bottom: 30px;
+    gap: 30px;
 }
